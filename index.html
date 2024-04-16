@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* style.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Login Form Styles */
+#login {
+    display: block;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#loginForm label {
+    display: block;
+    font-weight: bold;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"],
+#loginForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#loginForm button:hover {
+    background-color: #45a049;
+}
+
+/* Dashboard Styles */
+#vendorDashboard,
+#adminDashboard,
+#userDashboard {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="userType">Select User Type:</label>
+            <select id="userType">
+                <option value="user">User</option>
+                <option value="vendor">Vendor</option>
+                <option value="admin">Admin</option>
+            </select><br><br>
+            <input type="text" id="username" placeholder="Username"><br><br>
+            <input type="password" id="password" placeholder="Password"><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="vendorDashboard" style="display:none;">
+        <!-- Vendor Dashboard Contents -->
+    </div>
+
+    <div id="adminDashboard" style="display:none;">
+        <!-- Admin Dashboard Contents -->
+    </div>
+
+    <div id="userDashboard" style="display:none;">
+        <!-- User Dashboard Contents -->
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
